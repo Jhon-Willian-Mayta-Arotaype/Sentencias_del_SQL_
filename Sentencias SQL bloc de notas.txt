@@ -1,0 +1,58 @@
+/* Esta sentencia SQL selecciona todos los registros de la tabla 'productos'*/
+ SELECT *FROM productos
+
+/* Insertar un nuevo */
+
+INSERT INTO productos(descripcion,precio,cantidad,proveedor)
+VALUES('Galletas OREO',1.00,48,'San Jose');
+
+
+/* FILTROS*/
+
+/*Seleccionamos los registros que cumplan la condicion de "cantidad <=10*/
+SELECT * FROM `productos` WHERE cantidad <=10;
+
+/*filtramos los productos de acuerdo al precio*/
+SELECT * FROM `productos` WHERE precio <=10;
+
+/*Filtramos a los productos cuyo proveedor sea Gloria*/
+SELECT * FROM `productos` WHERE proveedor = "Gloria";
+
+/* Ordenamos por cantidad en forma ASCENDENTE*/
+SELECT * FROM `productos` ORDER BY cantidad;
+
+/* Ordenamos por cantidad en forma DESCENDENTE*/
+SELECT * FROM `productos` ORDER BY cantidad DESC;
+
+/* Ordenamos por descripcion en forma ASCENDENTE*/
+SELECT * FROM `productos` ORDER BY descripcion;
+
+/* Ordenamos por cantidad en forma DESCENDENTE*/
+SELECT * FROM `productos` ORDER BY descripcion DESC;
+
+
+/*BUSQUEDAS*/
+
+/*La siguiente sentencia busca todos los productos en cuya descripcion se encuentra la silaba "pa"*/
+SELECT * FROM productos WHERE descripcion LIKE '%PA%';
+
+/*Se buscara todo lo que inicia con "PA"*/ 
+SELECT * FROM productos WHERE descripcion LIKE 'PA%';
+
+/*Se buscara todo lo que Termina con "ON"*/ 
+SELECT * FROM productos WHERE descripcion LIKE '%ON';
+
+
+/*MODIFICACIONES*/
+
+/*La siguiente sentencia modifica el registro cuyo ID es igual a 1*/
+UPDATE productos SET descripcion="Azucar Blanca x 50K",cantidad=100,proveedor="POMALCA-Lima" WHERE id=1;
+
+
+/*ELIMINAR*/
+
+/*Eliminamos el producto cuyo ID es igual a 8*/
+DELETE FROM productos WHERE id=8;
+
+
+ 
