@@ -1,0 +1,34 @@
+OBJETIVO: MODELAMIENTO DE LA B.D. DE BIBLIOTECA
+===============================================
+Tablas
+
+1.- libros
+ *id 
+ *titulo
+ *autor
+ *n_paginas
+ *cantidad
+ *ubicación
+ *anio
+ * editorial
+ *foto_portada
+ *país
+ *categoría
+
+2.- usuarios
+ *id
+ *nombres
+ *apellidos
+ *dni
+ *correo
+ *celular
+ *user
+ *password
+ *dirección
+
+3.- préstamo
+ *id
+ *id_usuario
+ *id_libro
+ *fecha_del_prestamo
+ *fecha_de_devolucion
